@@ -1,0 +1,14 @@
+services:
+  docmost:
+    container_name: docmost-latest
+    image: docmost/docmost:latest
+    env_file:
+      - .env
+    ports:
+      - "${DOCKER_EXPOSE_IP:-0.0.0.0}:${EXPOSE_PORT:-3000}:3000"
+    restart: unless-stopped
+    networks:
+      - docmost_network
+      - redis-net
+    volumes:
+      - docmost:/app/data/storage
