@@ -2,6 +2,9 @@ services:
   docmost:
     container_name: docmost-latest
     image: alpharages/docmost:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
     env_file:
       - .env
     ports:
