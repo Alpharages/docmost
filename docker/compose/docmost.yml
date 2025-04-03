@@ -12,3 +12,6 @@ services:
       - redis-net
     volumes:
       - docmost:/app/data/storage
+
+volumes:
+  docmost:
