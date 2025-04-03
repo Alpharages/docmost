@@ -1,7 +1,7 @@
 services:
   docmost:
     container_name: docmost-latest
-    image: docmost/docmost:latest
+    image: docmost:latest
     env_file:
       - .env
     ports:
