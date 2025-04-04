@@ -1,0 +1,6 @@
+# Networks
+networks:
+  docmost_network:
+    driver: bridge
+  redis-net:
+    external: true
